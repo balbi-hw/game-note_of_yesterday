@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101514">
+  <title>어제의 문장 — Day 1</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="game.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">◫</span><span>어제의 문장 <small>DAY 1</small></span></div>
+      <div class="top-actions">
+        <button id="logButton" class="text-button" type="button">기록</button>
+        <button id="restartButton" class="text-button" type="button">처음부터</button>
+      </div>
+    </header>
+
+    <main id="game" class="game" aria-live="polite"></main>
+
+    <footer class="footer"><span>기록국 내부망 · 06:40–23:10</span><span id="progressText">DAY 1</span></footer>
+  </div>
+
+  <dialog id="logDialog" class="modal">
+    <div class="modal-head"><h2>지나간 문장</h2><button class="icon-button" id="closeLog" aria-label="닫기" type="button">×</button></div>
+    <div id="logContent" class="log-content"></div>
+  </dialog>
+  <dialog id="restartDialog" class="modal compact">
+    <div class="modal-head"><h2>처음부터 시작</h2></div>
+    <p>현재 진행 기록이 지워집니다.</p>
+    <div class="modal-actions"><button id="cancelRestart" class="button secondary" type="button">취소</button><button id="confirmRestart" class="button danger" type="button">다시 시작</button></div>
+  </dialog>
+</body>
+</html>
